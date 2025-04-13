@@ -147,4 +147,4 @@ To add a custom strategy:
 3. Register your strategy in the factory
 4. Update the configuration to use your strategy
 
-For more detailed information, see the [API Reference](API_REFERENCE.html).
+For more detailed information, see the [API Reference](API_REFERENCE.md).

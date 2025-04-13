@@ -307,4 +307,4 @@ All strategies should be thoroughly tested using the backtesting framework befor
 - Win rate
 - Profit factor
 
-See the [Backtesting Framework](BACKTESTING.html) documentation for details on strategy evaluation.
+See the [Backtesting Framework](BACKTESTING.md) documentation for details on strategy evaluation.

@@ -6,7 +6,7 @@ Thank you for your interest in contributing to BestTradingBot! This document pro
 
 ## Code of Conduct
 
-Please read and follow our [Code of Conduct](code_of_conduct.html) to keep our community respectful and inclusive.
+Please read and follow our [Code of Conduct](CODE_OF_CONDUCT.md) to keep our community respectful and inclusive.
 
 ## Getting Started
 
@@ -218,14 +218,14 @@ Our release process follows these steps:
 
 ## Additional Resources
 
-- [Project Home](index.html)
-- [Installation Guide](installation.html)
-- [Configuration Guide](configuration.html)
+- [Project Home](index.md)
+- [Installation Guide](INSTALLATION.md)
+- [Configuration Guide](CONFIGURATION.md)
 - [Discord Community](https://discord.gg/yourproject)
 
 ## Recognition
 
-All contributors will be recognized in our [CONTRIBUTORS.html](contributors.html) file. We value and appreciate your contributions to making BestTradingBot better!
+All contributors will be recognized in our [CONTRIBUTORS.md](CONTRIBUTORS.md) file. We value and appreciate your contributions to making BestTradingBot better!
 
 ## Questions and Support
 

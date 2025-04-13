@@ -103,4 +103,4 @@ If you encounter any issues during installation:
 - Check that all dependencies are properly installed
 - Verify your API credentials if connecting to exchanges
 
-For more detailed help, check the [Configuration Guide](CONFIGURATION.html) or open an issue on GitHub.
+For more detailed help, check the [Configuration Guide](CONFIGURATION.md) or open an issue on GitHub.
