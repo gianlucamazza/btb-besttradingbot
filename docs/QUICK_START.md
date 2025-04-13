@@ -163,4 +163,4 @@ btb cleanup [--logs] [--cache] [--pycache] [--verbose]
 - Experiment with ensemble strategies combining multiple models
 - Check documentation for advanced usage scenarios
 
-For full documentation, please refer to the main [Home page](INDEX.md) and other documentation sections.
+For full documentation, please refer to the main [Home page](index.md) and other documentation sections.

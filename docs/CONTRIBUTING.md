@@ -218,7 +218,7 @@ Our release process follows these steps:
 
 ## Additional Resources
 
-- [Project Home](INDEX.md)
+- [Project Home](index.md)
 - [Installation Guide](INSTALLATION.md)
 - [Configuration Guide](CONFIGURATION.md)
 - [Discord Community](https://discord.gg/yourproject)
