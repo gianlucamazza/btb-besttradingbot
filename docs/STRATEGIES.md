@@ -16,44 +16,44 @@ import pandas as pd
 
 class BaseStrategy(ABC):
     """Base class for all trading strategies."""
-    
+
     def __init__(self, params: Dict):
         """Initialize strategy with parameters."""
         self.params = params
-        
+
     @abstractmethod
     def generate_signals(self, data: pd.DataFrame) -> pd.DataFrame:
         """Generate trading signals based on the data.
-        
+
         Args:
             data: DataFrame with market data
-            
+
         Returns:
             DataFrame with signals (1 for buy, -1 for sell, 0 for hold)
         """
         pass
-    
+
     def calculate_position_size(self, capital: float, price: float) -> float:
         """Calculate position size based on available capital.
-        
+
         Args:
             capital: Available capital
             price: Current asset price
-            
+
         Returns:
             Position size in base currency units
         """
         position_pct = self.params.get("position_size", 0.1)  # Default 10%
         return (capital * position_pct) / price
-    
+
     @abstractmethod
     def should_update_stops(self, position, current_price: float) -> Tuple[bool, Optional[float], Optional[float]]:
         """Determine if stop loss/take profit should be updated.
-        
+
         Args:
             position: Current position information
             current_price: Current asset price
-            
+
         Returns:
             Tuple of (update_required, new_stop_loss, new_take_profit)
         """
@@ -69,7 +69,7 @@ This strategy uses a Transformer neural network to predict price movements and g
 ```python
 class TransformerStrategy(BaseStrategy):
     """Trading strategy based on Transformer model predictions."""
-    
+
     def __init__(self, params: Dict):
         super().__init__(params)
         self.model = self._load_model(params["model_path"])
@@ -81,7 +81,7 @@ class TransformerStrategy(BaseStrategy):
         self.trailing_stop = params.get("trailing_stop", False)
         self.trailing_activation = params.get("trailing_stop_activation", 0.01)  # 1%
         self.trailing_distance = params.get("trailing_stop_distance", 0.005)  # 0.5%
-        
+
     def _load_model(self, model_path: str):
         """Load the trained model from file."""
         import torch
@@ -90,68 +90,68 @@ class TransformerStrategy(BaseStrategy):
         model.load_state_dict(checkpoint["model_state_dict"])
         model.eval()
         return model
-    
+
     def _build_model_from_config(self, config):
         """Build model architecture from config."""
         from btb.models.transformer import TransformerModel
         return TransformerModel(**config)
-    
+
     def _preprocess_data(self, data: pd.DataFrame) -> torch.Tensor:
         """Preprocess data for model input."""
         # Implementation details omitted for brevity
         pass
-    
+
     def generate_signals(self, data: pd.DataFrame) -> pd.DataFrame:
         """Generate trading signals based on model predictions."""
         import torch
-        
+
         # Add signals column to data
         data = data.copy()
         data["signal"] = 0
-        
+
         # Skip if not enough data
         if len(data) < self.sequence_length + self.prediction_horizon:
             return data
-        
+
         # Prepare data for model
         X = self._preprocess_data(data)
-        
+
         # Generate predictions
         with torch.no_grad():
             predictions = self.model(X).numpy()
-        
+
         # Convert predictions to signals
         for i in range(len(data) - self.prediction_horizon):
             pred_return = predictions[i, 0]  # Predicted return
             confidence = abs(predictions[i, 1])  # Prediction confidence
-            
+
             # Generate signal if confidence exceeds threshold
             if confidence > self.confidence_threshold:
                 signal = 1 if pred_return > 0 else -1
                 data.loc[data.index[i + self.prediction_horizon], "signal"] = signal
-        
+
         return data
-    
+
     def should_update_stops(self, position, current_price: float) -> Tuple[bool, Optional[float], Optional[float]]:
         """Update stop loss and take profit levels."""
         if not position or not position["is_open"]:
             return False, None, None
-            
+
         entry_price = position["entry_price"]
         position_type = position["type"]  # 'long' or 'short'
         current_stop = position.get("stop_loss")
         current_take = position.get("take_profit")
-        
+
         # Calculate profit percentage
         if position_type == "long":
             profit_pct = (current_price - entry_price) / entry_price
         else:  # short
             profit_pct = (entry_price - current_price) / entry_price
-        
+
         # Initialize new stop loss and take profit
         new_stop = current_stop
         new_take = current_take
-        
+
         # Update trailing stop if enabled and activated
         if self.trailing_stop and profit_pct >= self.trailing_activation:
             if position_type == "long":
@@ -162,7 +162,7 @@ class TransformerStrategy(BaseStrategy):
                 trailing_level = current_price * (1 + self.trailing_distance)
                 if not current_stop or trailing_level < current_stop:
                     new_stop = trailing_level
-        
+
         # Determine if update is needed
         update_needed = (new_stop != current_stop) or (new_take != current_take)
         return update_needed, new_stop, new_take
@@ -175,7 +175,7 @@ This strategy uses an LSTM network with an attention mechanism to capture long-t
 ```python
 class LSTMAttentionStrategy(BaseStrategy):
     """Trading strategy based on LSTM with attention."""
-    
+
     # Implementation details similar to TransformerStrategy
     pass
 ```
@@ -187,13 +187,13 @@ Combines predictions from multiple models to generate more robust trading signal
 ```python
 class EnsembleStrategy(BaseStrategy):
     """Trading strategy that combines signals from multiple models."""
-    
+
     def __init__(self, params: Dict):
         super().__init__(params)
         self.models = self._load_models(params["model_paths"])
         self.weights = params.get("model_weights", None)  # Optional weighting
         # ... other initialization ...
-    
+
     def _load_models(self, model_paths: List[str]):
         """Load multiple models."""
         models = []
@@ -201,7 +201,7 @@ class EnsembleStrategy(BaseStrategy):
             # Load model
             pass
         return models
-    
+
     def generate_signals(self, data: pd.DataFrame) -> pd.DataFrame:
         """Generate signals by aggregating predictions from all models."""
         # Implementation details omitted for brevity
@@ -215,17 +215,17 @@ Uses reinforcement learning to learn optimal trading actions directly from marke
 ```python
 class RLStrategy(BaseStrategy):
     """Trading strategy based on reinforcement learning."""
-    
+
     def __init__(self, params: Dict):
         super().__init__(params)
         self.agent = self._load_agent(params["agent_path"])
         # ... other initialization ...
-    
+
     def _load_agent(self, agent_path: str):
         """Load trained RL agent."""
         # Implementation details omitted for brevity
         pass
-    
+
     def generate_signals(self, data: pd.DataFrame) -> pd.DataFrame:
         """Generate signals using RL agent."""
         # Implementation details omitted for brevity
@@ -281,16 +281,16 @@ from btb.strategies.factory import register_strategy
 @register_strategy("my_custom_strategy")
 class MyCustomStrategy(BaseStrategy):
     """A custom trading strategy."""
-    
+
     def __init__(self, params: Dict):
         super().__init__(params)
         # Custom initialization
-        
+
     def generate_signals(self, data: pd.DataFrame) -> pd.DataFrame:
         """Implement your custom signal generation logic."""
         # Implementation
         return data_with_signals
-    
+
     def should_update_stops(self, position, current_price: float) -> Tuple[bool, Optional[float], Optional[float]]:
         """Implement custom stop loss/take profit logic."""
         # Implementation
@@ -307,4 +307,4 @@ All strategies should be thoroughly tested using the backtesting framework befor
 - Win rate
 - Profit factor
 
-See the [Backtesting Framework](BACKTESTING.md) documentation for details on strategy evaluation.
+See the [Backtesting Framework](BACKTESTING.html) documentation for details on strategy evaluation.

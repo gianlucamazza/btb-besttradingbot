@@ -151,7 +151,7 @@ btb cleanup [--logs] [--cache] [--pycache] [--verbose]
 
 ## 10. Common Issues and Solutions
 
-- **Exchange API issues**: Ensure your API keys have the correct permissions 
+- **Exchange API issues**: Ensure your API keys have the correct permissions
 - **Model training errors**: Check data dimensions and ensure sequence lengths match
 - **Backtesting performance**: Optimize strategy parameters in config files
 - **Memory usage concerns**: Reduce sequence lengths or batch sizes for larger datasets
@@ -163,4 +163,4 @@ btb cleanup [--logs] [--cache] [--pycache] [--verbose]
 - Experiment with ensemble strategies combining multiple models
 - Check documentation for advanced usage scenarios
 
-For full documentation, please refer to the main [Home page](index.md) and other documentation sections.
+For full documentation, please refer to the main [Home page](index.html) and other documentation sections.
