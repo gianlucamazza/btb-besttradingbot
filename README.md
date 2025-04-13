@@ -56,19 +56,19 @@ bot = TradingBot(config)
 bot.run()
 ```
 
-For more detailed instructions, see the [Quick Start Guide](https://gianlucamazza.github.io/btb-besttradingbot/QUICK_START.html).
+For more detailed instructions, see the [Quick Start Guide](https://gianlucamazza.github.io/btb-besttradingbot/quick_start.html).
 
 ## 📚 Documentation
 
 Complete documentation is available at our [documentation site](https://gianlucamazza.github.io/btb-besttradingbot/).
 
 Key sections:
-- [Installation Guide](https://gianlucamazza.github.io/btb-besttradingbot/INSTALLATION.html)
-- [Configuration Options](https://gianlucamazza.github.io/btb-besttradingbot/CONFIGURATION.html)
-- [Trading Strategies](https://gianlucamazza.github.io/btb-besttradingbot/STRATEGIES.html)
-- [Backtesting Framework](https://gianlucamazza.github.io/btb-besttradingbot/BACKTESTING.html)
-- [Machine Learning Models](https://gianlucamazza.github.io/btb-besttradingbot/MODELS.html)
-- [API Reference](https://gianlucamazza.github.io/btb-besttradingbot/API_REFERENCE.html)
+- [Installation Guide](https://gianlucamazza.github.io/btb-besttradingbot/installation.html)
+- [Configuration Options](https://gianlucamazza.github.io/btb-besttradingbot/configuration.html)
+- [Trading Strategies](https://gianlucamazza.github.io/btb-besttradingbot/strategies.html)
+- [Backtesting Framework](https://gianlucamazza.github.io/btb-besttradingbot/backtesting.html)
+- [Machine Learning Models](https://gianlucamazza.github.io/btb-besttradingbot/models.html)
+- [API Reference](https://gianlucamazza.github.io/btb-besttradingbot/api_reference.html)
 
 ## 🏗️ Project Structure
 
@@ -88,7 +88,7 @@ btb-besttradingbot/
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please see our [Contributing Guidelines](https://gianlucamazza.github.io/btb-besttradingbot/CONTRIBUTING.html) for details on how to get started.
+Contributions are welcome! Please see our [Contributing Guidelines](https://gianlucamazza.github.io/btb-besttradingbot/contributing.html) for details on how to get started.
 
 ### Development Setup
 
