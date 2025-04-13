@@ -4,7 +4,7 @@ A customizable cryptocurrency trading bot with machine learning capabilities.
 
 ## Documentation
 
-For full documentation, please visit our [documentation site](https://yourusername.github.io/btb-besttradingbot) or navigate to the `docs/` directory in this repository.
+For full documentation, please visit our [documentation site](https://gianlucamazza.github.io/btb-besttradingbot) or navigate to the `docs/` directory in this repository.
 
 ## Quick Start
 

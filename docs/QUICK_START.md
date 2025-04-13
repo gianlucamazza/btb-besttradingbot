@@ -6,7 +6,7 @@ This guide provides a step-by-step walkthrough to get you up and running with Be
 
 ```bash
 # Clone the repository (if you haven't already)
-git clone https://github.com/yourusername/btb-besttradingbot.git
+git clone https://github.com/gianlucamazza/btb-besttradingbot.git
 cd btb-besttradingbot
 
 # Create and activate a virtual environment

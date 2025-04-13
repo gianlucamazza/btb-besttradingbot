@@ -1,7 +1,7 @@
 site_name: Best Trading Bot
 site_description: Documentation for the Best Trading Bot (BTB) - a customizable cryptocurrency trading bot
 site_author: BTB Team
-repo_url: https://github.com/yourusername/btb-besttradingbot
+repo_url: https://github.com/gianlucamazza/btb-besttradingbot
 
 docs_dir: docs
 site_dir: site
@@ -47,7 +47,7 @@ plugins:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/yourusername/btb-besttradingbot
+      link: https://github.com/gianlucamazza/btb-besttradingbot
 
 nav:
   - Home: INDEX.md

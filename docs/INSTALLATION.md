@@ -19,7 +19,7 @@ If you are not redirected automatically, follow this [link to the installation g
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/btb-besttradingbot.git
+git clone https://github.com/gianlucamazza/btb-besttradingbot.git
 cd btb-besttradingbot
 ```
 
