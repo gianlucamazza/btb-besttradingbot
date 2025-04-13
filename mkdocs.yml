@@ -6,7 +6,7 @@ site_url: https://gianlucamazza.github.io/btb-besttradingbot/
 
 docs_dir: docs
 site_dir: site
-use_directory_urls: true
+use_directory_urls: false
 strict: false
 
 theme:
@@ -38,14 +38,14 @@ plugins:
   - search
   - redirects:
       redirect_maps:
-        'installation.md': 'INSTALLATION.md'
-        'configuration.md': 'CONFIGURATION.md'
-        'backtesting.md': 'BACKTESTING.md'
-        'readme.md': 'index.md'
-        'README.md': 'index.md'
-        'CODE_OF_CONDUCT.md': 'CODE_OF_CONDUCT.md'
-        '../README.md': 'index.md'
-        '../CONTRIBUTORS.md': 'CONTRIBUTORS.md'
+        'installation.md': 'INSTALLATION.html'
+        'configuration.md': 'CONFIGURATION.html'
+        'backtesting.md': 'BACKTESTING.html'
+        'readme.md': 'index.html'
+        'README.md': 'index.html'
+        'CODE_OF_CONDUCT.md': 'CODE_OF_CONDUCT.html'
+        '../README.md': 'index.html'
+        '../CONTRIBUTORS.md': 'CONTRIBUTORS.html'
 
 extra:
   social:
