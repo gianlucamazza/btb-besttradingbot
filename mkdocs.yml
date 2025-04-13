@@ -36,16 +36,6 @@ markdown_extensions:
 
 plugins:
   - search
-  - redirects:
-      redirect_maps:
-        'installation.md': 'INSTALLATION.html'
-        'configuration.md': 'CONFIGURATION.html'
-        'backtesting.md': 'BACKTESTING.html'
-        'readme.md': 'index.html'
-        'README.md': 'index.html'
-        'CODE_OF_CONDUCT.md': 'CODE_OF_CONDUCT.html'
-        '../README.md': 'index.html'
-        '../CONTRIBUTORS.md': 'CONTRIBUTORS.html'
 
 extra:
   social:
