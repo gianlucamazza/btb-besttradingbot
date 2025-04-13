@@ -1,0 +1,71 @@
+site_name: Best Trading Bot
+site_description: Documentation for the Best Trading Bot (BTB) - a customizable cryptocurrency trading bot
+site_author: BTB Team
+repo_url: https://github.com/yourusername/btb-besttradingbot
+
+docs_dir: docs
+site_dir: site
+use_directory_urls: false
+strict: false
+
+theme:
+  name: material
+  palette:
+    primary: indigo
+    accent: indigo
+  features:
+    - navigation.tabs
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - search.highlight
+    - search.share
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed
+  - pymdownx.details
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+  - redirects:
+      redirect_maps:
+        'installation.md': 'INSTALLATION.md'
+        'configuration.md': 'CONFIGURATION.md'
+        'backtesting.md': 'BACKTESTING.md'
+        'readme.md': 'INDEX.md'
+        'README.md': 'INDEX.md'
+        'CODE_OF_CONDUCT.md': 'CODE_OF_CONDUCT.md'
+        '../README.md': 'INDEX.md'
+        '../CONTRIBUTORS.md': 'CONTRIBUTORS.md'
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/yourusername/btb-besttradingbot
+
+nav:
+  - Home: INDEX.md
+  - Getting Started:
+    - Installation: INSTALLATION.md
+    - Configuration: CONFIGURATION.md
+    - Quick Start: QUICK_START.md
+  - User Guide:
+    - Trading Strategies: STRATEGIES.md
+    - Backtesting: BACKTESTING.md
+    - Models: MODELS.md
+  - API Reference: API_REFERENCE.md
+  - Development:
+    - Contributing: CONTRIBUTING.md
+    - Contributors: CONTRIBUTORS.md
+    - Implementation Summary: IMPLEMENTATION_SUMMARY.md
+    - Code of Conduct: CODE_OF_CONDUCT.md
+  - Updates: UPDATES.md
+  - Final Results: FINAL_RESULTS.md
+
+repo_name: BTB-BestTradingBot 

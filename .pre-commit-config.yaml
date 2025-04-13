@@ -1,0 +1,67 @@
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+    -   id: trailing-whitespace
+    -   id: end-of-file-fixer
+    -   id: check-yaml
+    -   id: check-json
+    -   id: check-toml
+    -   id: check-added-large-files
+        args: ['--maxkb=1000']
+    -   id: check-merge-conflict
+    -   id: debug-statements
+    -   id: detect-private-key
+    -   id: check-ast
+
+-   repo: https://github.com/psf/black
+    rev: 23.11.0
+    hooks:
+    -   id: black
+        args: ["--config", "pyproject.toml"]
+
+-   repo: https://github.com/pycqa/isort
+    rev: 5.12.0
+    hooks:
+    -   id: isort
+        args: ["--settings-path", "pyproject.toml"]
+
+-   repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.1.5
+    hooks:
+    -   id: ruff
+        args: ["--fix", "--config", "pyproject.toml"]
+
+-   repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.7.0
+    hooks:
+    -   id: mypy
+        additional_dependencies: [types-requests, types-PyYAML, types-setuptools]
+
+-   repo: https://github.com/PyCQA/bandit
+    rev: 1.7.5
+    hooks:
+    -   id: bandit
+        args: ["-c", "pyproject.toml", "-r", "btb"]
+        exclude: ^tests/
+
+-   repo: https://github.com/pycqa/pydocstyle
+    rev: 6.3.0
+    hooks:
+    -   id: pydocstyle
+        additional_dependencies: [toml]
+        args: ["--config=pyproject.toml"]
+        exclude: ^tests/
+
+-   repo: https://github.com/nbQA-dev/nbQA
+    rev: 1.7.0
+    hooks:
+    -   id: nbqa-black
+        additional_args: ["--line-length=120"]
+        files: ^notebooks/.*\.ipynb$
+    -   id: nbqa-isort
+        additional_args: ["--profile=black", "--line-length=120"]
+        files: ^notebooks/.*\.ipynb$
+    -   id: nbqa-ruff
+        additional_args: ["--config", "pyproject.toml"]
+        files: ^notebooks/.*\.ipynb$ 

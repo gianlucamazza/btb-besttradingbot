@@ -1,0 +1,9 @@
+[flake8]
+max-line-length = 120
+exclude = .git, .venv, __pycache__, build, dist, .eggs, .mypy_cache, *.egg-info
+per-file-ignores =
+    __init__.py:F401
+    tests/*:S101,D103,D100,E501
+ignore = E203, W503, D100, D104, D107, D203, D212, D213
+extend-ignore = E203, W503
+max-complexity = 12 

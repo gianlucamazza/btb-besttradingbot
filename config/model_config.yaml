@@ -1,0 +1,33 @@
+# Model architecture
+model:
+  type: transformer  # Options: "lstm", "transformer", "cnn", "ensemble"
+  hidden_dim: 128
+  num_layers: 3
+  dropout: 0.2
+  attention_heads: 8
+  
+# Training parameters
+training:
+  batch_size: 64
+  learning_rate: 0.001
+  epochs: 100
+  early_stopping: true
+  patience: 15
+  optimizer: "adam"  # Options: "adam", "sgd", "rmsprop"
+  scheduler: "cosine"  # Learning rate scheduler
+  weight_decay: 1e-5
+  gradient_clipping: 1.0
+
+# Input features
+features:
+  sequence_length: 60  # Number of time steps to consider
+  technical_indicators: true
+  sentiment_analysis: true
+  include_volume: true
+  include_time_features: true
+  
+# Prediction settings
+prediction:
+  output_type: "regression"  # "regression" or "classification"
+  prediction_horizon: 24  # Hours to predict ahead
+  confidence_threshold: 0.7  # Minimum confidence for a trade signal

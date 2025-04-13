@@ -1,0 +1,66 @@
+# Backtest settings
+backtest:
+  start_date: "2022-01-01"
+  end_date: "2023-01-01"
+  symbols: ["BTCUSDT", "ETHUSDT"]  # Includiamo entrambi i simboli
+  timeframes: ["1h", "4h"]    # Includiamo entrambi i timeframe
+  strategy: lstm_strategy
+  initial_capital: 10000  # USDT
+  commission: 0.0007  # 0.07% trading fee
+  slippage: 0.0001  # 0.01% slippage
+  
+# Strategy parameters
+strategy_params:
+  models_dir: "models/"  # Directory contenente tutti i modelli
+  model_naming_pattern: "lstm_{symbol}_{timeframe}_model.pth"  # Pattern per trovare i modelli
+  confidence_threshold: 0.65
+  sequence_length: 60
+  position_size: 0.1  # Use 10% of capital per trade
+  stop_loss: 0.03
+  take_profit: 0.06
+  trailing_stop: true
+  trailing_stop_activation: 0.015  # 1.5%
+  trailing_stop_distance: 0.008  # 0.8%
+  # Elenco completo delle features utilizzate durante l'addestramento del modello
+  features: [
+    "close", 
+    "volume", 
+    "open", 
+    "high", 
+    "low", 
+    "ma_7", 
+    "ma_21", 
+    "ma_50", 
+    "ma_200", 
+    "rsi", 
+    "macd", 
+    "macd_signal", 
+    "macd_hist", 
+    "bb_upper", 
+    "bb_middle", 
+    "bb_lower", 
+    "atr", 
+    "stoch_k", 
+    "stoch_d", 
+    "daily_return", 
+    "weekly_return", 
+    "monthly_return", 
+    "volatility", 
+    "obv", 
+    "adx"
+  ]
+  
+# Data processing
+data_processing:
+  train_test_split: 0.8  # 80% training, 20% testing
+  feature_engineering: true
+  normalization: "min_max"  # Options: "min_max", "z_score", "robust"
+  fill_missing: "ffill"  # Forward fill missing values
+
+# Performance metrics
+metrics:
+  calculate_sharpe: true
+  calculate_sortino: true
+  calculate_drawdown: true
+  calculate_win_rate: true
+  benchmark: "BTCUSDT"  # Symbol to compare performance against

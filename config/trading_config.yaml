@@ -1,0 +1,50 @@
+# Exchange settings
+exchange:
+  name: bybit
+  testnet: false  # Set to false for live trading
+  rate_limit: true
+
+# Trading parameters
+trading:
+  base_currency: BTC
+  quote_currency: USDT
+  symbols: ["BTCUSDT", "ETHUSDT", "SOLUSDT"]
+  timeframes: ["1h", "4h", "1d"]
+  strategy: lstm_strategy
+  position_size: 0.1  # 10% of available balance per trade
+  max_open_positions: 3
+  
+# Risk management
+risk:
+  max_drawdown: 0.15  # 15% maximum drawdown
+  stop_loss: 0.02  # 2% stop loss
+  take_profit: 0.04  # 4% take profit
+  trailing_stop: true
+  trailing_stop_activation: 0.01  # Activate at 1% profit
+  trailing_stop_distance: 0.005  # 0.5% trailing distance
+
+# Data collection
+data:
+  lookback_period: 720  # Hours of historical data to maintain
+  features: ["close", "volume", "ma_50", "rsi", "bbands"]
+  cache_data: true
+  update_interval: 300  # Seconds between data updates
+
+# Execution settings
+execution:
+  order_type: LIMIT  # MARKET or LIMIT
+  limit_order_expiry: 60  # Seconds before a limit order is canceled
+  max_retries: 3
+  retry_delay: 5  # Seconds between retries
+
+# Strategy parameters
+strategy_params:
+  models_dir: "models/"  # Directory containing all model files
+  # Removed model_path to use automatic model selection based on symbol and timeframe
+  confidence_threshold: 0.65
+  sequence_length: 60
+  stop_loss: 0.02
+  take_profit: 0.04
+  trailing_stop: true
+  trailing_stop_activation: 0.01
+  trailing_stop_distance: 0.005
