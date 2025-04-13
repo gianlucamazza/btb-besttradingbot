@@ -1,59 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://gianlucamazza.github.io/btb-besttradingbot/</loc>
+         <loc>https://gianlucamazza.github.io/btb-besttradingbot/index.html</loc>
          <lastmod>2025-04-13</lastmod>
     </url>
     <url>
-         <loc>https://gianlucamazza.github.io/btb-besttradingbot/API_REFERENCE/</loc>
+         <loc>https://gianlucamazza.github.io/btb-besttradingbot/API_REFERENCE.html</loc>
          <lastmod>2025-04-13</lastmod>
     </url>
     <url>
-         <loc>https://gianlucamazza.github.io/btb-besttradingbot/BACKTESTING/</loc>
+         <loc>https://gianlucamazza.github.io/btb-besttradingbot/BACKTESTING.html</loc>
          <lastmod>2025-04-13</lastmod>
     </url>
     <url>
-         <loc>https://gianlucamazza.github.io/btb-besttradingbot/CODE_OF_CONDUCT/</loc>
+         <loc>https://gianlucamazza.github.io/btb-besttradingbot/CODE_OF_CONDUCT.html</loc>
          <lastmod>2025-04-13</lastmod>
     </url>
     <url>
-         <loc>https://gianlucamazza.github.io/btb-besttradingbot/CONFIGURATION/</loc>
+         <loc>https://gianlucamazza.github.io/btb-besttradingbot/CONFIGURATION.html</loc>
          <lastmod>2025-04-13</lastmod>
     </url>
     <url>
-         <loc>https://gianlucamazza.github.io/btb-besttradingbot/CONTRIBUTING/</loc>
+         <loc>https://gianlucamazza.github.io/btb-besttradingbot/CONTRIBUTING.html</loc>
          <lastmod>2025-04-13</lastmod>
     </url>
     <url>
-         <loc>https://gianlucamazza.github.io/btb-besttradingbot/CONTRIBUTORS/</loc>
+         <loc>https://gianlucamazza.github.io/btb-besttradingbot/CONTRIBUTORS.html</loc>
          <lastmod>2025-04-13</lastmod>
     </url>
     <url>
-         <loc>https://gianlucamazza.github.io/btb-besttradingbot/FINAL_RESULTS/</loc>
+         <loc>https://gianlucamazza.github.io/btb-besttradingbot/FINAL_RESULTS.html</loc>
          <lastmod>2025-04-13</lastmod>
     </url>
     <url>
-         <loc>https://gianlucamazza.github.io/btb-besttradingbot/IMPLEMENTATION_SUMMARY/</loc>
+         <loc>https://gianlucamazza.github.io/btb-besttradingbot/IMPLEMENTATION_SUMMARY.html</loc>
          <lastmod>2025-04-13</lastmod>
     </url>
     <url>
-         <loc>https://gianlucamazza.github.io/btb-besttradingbot/INSTALLATION/</loc>
+         <loc>https://gianlucamazza.github.io/btb-besttradingbot/INSTALLATION.html</loc>
          <lastmod>2025-04-13</lastmod>
     </url>
     <url>
-         <loc>https://gianlucamazza.github.io/btb-besttradingbot/MODELS/</loc>
+         <loc>https://gianlucamazza.github.io/btb-besttradingbot/MODELS.html</loc>
          <lastmod>2025-04-13</lastmod>
     </url>
     <url>
-         <loc>https://gianlucamazza.github.io/btb-besttradingbot/QUICK_START/</loc>
+         <loc>https://gianlucamazza.github.io/btb-besttradingbot/QUICK_START.html</loc>
          <lastmod>2025-04-13</lastmod>
     </url>
     <url>
-         <loc>https://gianlucamazza.github.io/btb-besttradingbot/STRATEGIES/</loc>
+         <loc>https://gianlucamazza.github.io/btb-besttradingbot/STRATEGIES.html</loc>
          <lastmod>2025-04-13</lastmod>
     </url>
     <url>
-         <loc>https://gianlucamazza.github.io/btb-besttradingbot/UPDATES/</loc>
+         <loc>https://gianlucamazza.github.io/btb-besttradingbot/UPDATES.html</loc>
          <lastmod>2025-04-13</lastmod>
     </url>
 </urlset>
