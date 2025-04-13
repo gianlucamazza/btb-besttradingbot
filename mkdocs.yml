@@ -2,10 +2,11 @@ site_name: Best Trading Bot
 site_description: Documentation for the Best Trading Bot (BTB) - a customizable cryptocurrency trading bot
 site_author: BTB Team
 repo_url: https://github.com/gianlucamazza/btb-besttradingbot
+site_url: https://gianlucamazza.github.io/btb-besttradingbot/
 
 docs_dir: docs
 site_dir: site
-use_directory_urls: false
+use_directory_urls: true
 strict: false
 
 theme:
@@ -20,6 +21,8 @@ theme:
     - navigation.top
     - search.highlight
     - search.share
+  icon:
+    logo: material/trending-up
 
 markdown_extensions:
   - admonition
@@ -38,10 +41,10 @@ plugins:
         'installation.md': 'INSTALLATION.md'
         'configuration.md': 'CONFIGURATION.md'
         'backtesting.md': 'BACKTESTING.md'
-        'readme.md': 'INDEX.md'
-        'README.md': 'INDEX.md'
+        'readme.md': 'index.md'
+        'README.md': 'index.md'
         'CODE_OF_CONDUCT.md': 'CODE_OF_CONDUCT.md'
-        '../README.md': 'INDEX.md'
+        '../README.md': 'index.md'
         '../CONTRIBUTORS.md': 'CONTRIBUTORS.md'
 
 extra:
@@ -50,7 +53,7 @@ extra:
       link: https://github.com/gianlucamazza/btb-besttradingbot
 
 nav:
-  - Home: INDEX.md
+  - Home: index.md
   - Getting Started:
     - Installation: INSTALLATION.md
     - Configuration: CONFIGURATION.md
