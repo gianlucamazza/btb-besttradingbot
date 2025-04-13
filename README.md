@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![BTB Logo](docs/assets/images/favicon.png)
+![BTB Logo](docs/assets/images/btb_logo.png)
 
 **A powerful, customizable cryptocurrency trading bot with machine learning capabilities**
 
