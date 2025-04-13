@@ -86,4 +86,3 @@ api_keys.json
 site/
 
 # End of file
-EOF < /dev/null
