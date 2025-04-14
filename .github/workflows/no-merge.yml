@@ -1,0 +1,17 @@
+name: Block PRs from gh-pages
+
+on:
+  pull_request:
+    branches:
+      - master
+      - main
+
+jobs:
+  check-source-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Block PRs from gh-pages
+        if: github.head_ref == 'gh-pages'
+        run: |
+          echo "::error::Pull Requests from the gh-pages branch are not allowed. The gh-pages branch is automatically managed by GitHub Actions."
+          exit 1 
