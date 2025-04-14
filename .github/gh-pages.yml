@@ -1,0 +1,6 @@
+# Configurazione per il branch gh-pages
+# Questo file viene utilizzato per configurare il comportamento del branch gh-pages
+
+# Ignora i contenuti del branch gh-pages quando si fa pull request detection
+noCi: true
+noMerge: true

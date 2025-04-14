@@ -1,0 +1,6 @@
+# Ignora i commit di gh-pages in git blame
+# Puoi aggiungere qui gli hash dei commit del branch gh-pages che vuoi ignorare
+# Formato: ogni hash su una riga separata
+
+# Per usare questo file:
+# git config blame.ignoreRevsFile .git-blame-ignore-revs

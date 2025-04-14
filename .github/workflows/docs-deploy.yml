@@ -44,4 +44,4 @@ jobs:
       - name: Build and deploy documentation
         run: |
           mkdocs build
-          mkdocs gh-deploy --force --no-history
+          mkdocs gh-deploy --force --no-history --message="Update documentation [skip ci]"
